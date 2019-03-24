@@ -1,17 +1,15 @@
-import { FETCH_DOG } from '../actions/dog';
+import { GET_IMAGE } from '../actions/ImageAction';
 
 const initialState = {
-  dog:''
-
+  url: ''
 };
 
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
-    case FETCH_DOG:
+    case GET_IMAGE:
       return { ...state,
-        dog: payload.message
+        url: payload.message
       };
-    default: return state; 
+    default: return state;
   }
 }
-

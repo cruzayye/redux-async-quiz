@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from '../Image';
+import DogImage from '../../containers/DogImage';
 
 export default function App() {
-  return <Image />;
+  return <DogImage />;
 }

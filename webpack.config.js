@@ -1,6 +1,7 @@
 const HtmlPlugin = require('html-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
 
+// eslint-disable-next-line no-undef
 module.exports = {
   entry: ['@babel/polyfill', './src/index.js'],
   output: {
@@ -9,6 +10,7 @@ module.exports = {
   },
   devServer: {
     port: 7890,
+    host: '127.0.0.1',
     historyApiFallback: true
   },
   plugins: [

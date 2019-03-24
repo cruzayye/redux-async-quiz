@@ -1,27 +1,29 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Image extends PureComponent {
-  static propTypes = {
-    img: PropTypes.string.isRequired,
-    fetchDog: PropTypes.func.isRequired
-  };
+// export default class Image extends PureComponent {
+//   static propTypes = {
+//     img: PropTypes.string.isRequired
+//   }
+//   render() {
+//     const { img } = this.props;
+//     return (
+//       <img src={img}/>
+//     );
+        
+//   }
+// }
 
-  componentDidMount() {
-    this.props.fetchDog();
-  }
-
-  render() {
-    const { img } = this.props;
-    return (
-      <p>{img}</p>
-    );
-  }
-
+export default function Image({ img, onClick }) {
+  return (
+    <>
+    <img src={img} />
+    <button onClick={onClick}>new image</button>
+    </>
+  );
 }
 
-export default Image;
-
-
-
-
+Image.propTypes = {
+  img: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
+};
